@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  transition: 0.3s;
+  background-color: #ddd;      /* normale kleur */
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+ background-color: #007bff;   /* blauw bij hover */
+  color: white;           
+}
+
+.hero-image {
+  height: 250px;
+  position: absolute;
+  left: 0;              
+  top: 240px;              
+  transform: translateY(-50%); 
+  border-radius: 20px;
+  margin-left: 50px;
+  background-color: #007bff;
+  padding: 10px;
+}
+
+.eerste {
+  position: relative;
+  top: 30px;
+  left: 700px;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  background-color: #007bff;
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+} 
+
+.footerhome {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.armemensen {
+   border-radius: 20px;
+   height: 250px; 
+   position: absolute;
+   left: 0;              
+   top: 550px;              
+   transform: translateY(-50%); 
+   border-radius: 20px;
+   margin-left: 130px;
+   background-color: #007bff;
+   padding: 10px;
+}
+
+.tweede {
+ position: relative;
+  top: 30px;
+  left: 100px;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  background-color: #007bff;
+  padding: 50px;
+  border-radius: 20px;
+  color: white;
+}
+
+.schoolsysteem {
+   border-radius: 20px;
+   height: 350px; 
+   position: absolute;
+   left: 850px;              
+   top: 400px;              
+   transform: translateY(-50%); 
+   border-radius: 20px;
+   margin-left: 50px;
+   background-color: #007bff;
+   padding: 10px;
+}
+
+.footerschool {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
+}
