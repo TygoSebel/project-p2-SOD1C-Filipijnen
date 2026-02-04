@@ -1,0 +1,217 @@
+/* Countdown Timer Styles */
+
+.countdown-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-align: center;
+}
+
+.countdown-header {
+    margin-bottom: 30px;
+}
+
+.countdown-header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+}
+
+.countdown-header p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.event-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.event-date {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.event-description {
+    font-size: 0.95rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.countdown-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.countdown-unit {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.countdown-unit:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.status.upcoming {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.status.happening {
+    background-color: #4caf50;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.status.ended {
+    background-color: #f44336;
+    color: white;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.event-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn.primary:hover {
+    background-color: #218838;
+}
+
+.calendar-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.calendar-section h3 {
+    margin-top: 0;
+}
+
+.calendar-input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.past-events {
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.past-events h3 {
+    margin-top: 0;
+}
+
+.event-item {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.event-item:last-child {
+    margin-bottom: 0;
+}
+
+.event-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.event-date-past {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .countdown-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .countdown-number {
+        font-size: 1.8rem;
+    }
+
+    .countdown-header h1 {
+        font-size: 1.8rem;
+    }
+}

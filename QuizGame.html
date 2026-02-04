@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz over het goede doel - Filipijnen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/quiz-game.css">
+</head>
+<body>
+<header>
+           
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">🌏 Filipijnen</div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="Home.html">🏠 Home</a></li>
+            <li class="nav-item"><a href="Schoolsysteem.html">🎓 Schoolsysteem</a></li>
+            <li class="nav-item"><a href="Problemen.html">⚠️ Maatschappelijke Problemen</a></li>
+            <li class="nav-item"><a href="Oppervlakte.html">📍 Oppervlakte</a></li>
+            <li class="nav-item"><a href="aanbieden.html">🤝 Meewerken</a></li>
+            <li class="nav-item dropdown">
+                <button class="dropdown-toggle">💪 Acties</button>
+                <div class="dropdown-menu">
+                    <a href="Donatie-Tracker.html"><span class="dropdown-icon">💰</span>Donatie Tracker</a>
+                    <a href="QuizGame.html"><span class="dropdown-icon">🎓</span>Quiz</a>
+                    <a href="Countdown.html"><span class="dropdown-icon">⏱️</span>Event Countdown</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="quiz-container">
+    <div class="quiz-header">
+        <h1>🎓 Quiz over het goede doel</h1>
+        <p>Test je kennis over de Filipijnen en ons missie!</p>
+    </div>
+
+    <div class="quiz-progress">
+        <div class="quiz-progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="quizContent" class="question-container">
+        <div class="question-counter" id="questionCounter">Vraag 1 van 5</div>
+        <div class="question-text" id="questionText"></div>
+        <div class="answer-options" id="answerOptions"></div>
+        <div class="feedback" id="feedback"></div>
+    </div>
+
+    <div id="resultsContainer" class="results-container">
+        <h2>Quiz voltooid! 🎉</h2>
+        <div class="score-circle" id="scoreCircle">0/5</div>
+        <div class="score-text" id="scoreMessage"></div>
+    </div>
+
+    <div class="button-group">
+        <button id="prevBtn" class="btn btn-secondary" onclick="previousQuestion()" disabled>← Vorige</button>
+        <button id="nextBtn" class="btn btn-primary" onclick="nextQuestion()" disabled>Volgende →</button>
+        <button id="restartBtn" class="btn btn-restart hidden" onclick="restartQuiz()">Quiz opnieuw starten</button>
+    </div>
+</div>
+
+<footer class="footerhome">
+    <p>&copy; 2025 Filipijnen. All rights reserved.</p>
+</footer>
+
+<script src="js/quiz-game.js"></script>
+</body>
+</html>
