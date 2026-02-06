@@ -1,5 +1,3 @@
-// Quiz Game JavaScript
-
 const questions = [
     {
         question: "Wat is de hoofdstad van de Filipijnen?",
@@ -136,15 +134,15 @@ function showResults() {
     const percentage = (score / questions.length) * 100;
     
     if (percentage === 100) {
-        message = 'Perfecte score! Je bent een Filipijnen expert! 🌟';
+        message = 'Perfecte score! Je bent een Filipijnen expert! ';
     } else if (percentage >= 80) {
-        message = 'Uitstekend! Je weet veel over de Filipijnen! 🎯';
+        message = 'Uitstekend! Je weet veel over de Filipijnen! ';
     } else if (percentage >= 60) {
-        message = 'Goed gedaan! Je hebt veel geleerd! 📚';
+        message = 'Goed gedaan! Je hebt veel geleerd! ';
     } else if (percentage >= 40) {
-        message = 'Aardig geprobeerd! Er is nog veel te ontdekken! 🔍';
+        message = 'Aardig geprobeerd! Er is nog veel te ontdekken! ';
     } else {
-        message = 'Volgende keer beter! Lees meer over de Filipijnen! 📖';
+        message = 'Volgende keer beter! Lees meer over de Filipijnen! ';
     }
     
     document.getElementById('scoreMessage').textContent = message;
@@ -165,5 +163,4 @@ function restartQuiz() {
     loadQuestion();
 }
 
-// Load eerste vraag
 window.addEventListener('load', loadQuestion);

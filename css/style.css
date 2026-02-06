@@ -1,8 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #ffffff;
-  color: #222;
+  color: #000;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .navbar {
@@ -43,6 +46,13 @@ body {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 6px;
+}
+
+/* Improve container visuals for readability */
+.container {
+  box-shadow: 0 8px 20px rgba(14, 30, 37, 0.06);
+  color: #000;
+  padding: 26px;
 }
 
 h1 {
@@ -206,6 +216,100 @@ section {
   border-radius: 8px;
 }
 
+/* Readable content boxes and typography */
+.content-box, .content-section {
+  max-width: 900px;
+  margin: 24px auto;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(14,30,37,0.06);
+  color: #222;
+}
+
+/* Paragraph and heading improvements */
+p, .eerste, .tweede {
+p, .eerste, .tweede {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #000;
+  margin-bottom: 1rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  line-height: 1.2;
+  color: #000;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* Responsive images and consistent image classes */
+.hero-image, .hero-imag, .armemensen, .schoolsysteem, img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 18px auto;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(14,30,37,0.06);
+  object-fit: cover;
+}
+
+/* Content area inside pages */
+.main-content { padding: 18px; }
+
+/* Image wrapper for consistent aspect ratio and cropping */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f0f2f5, #e9eef6);
+  box-shadow: 0 6px 18px rgba(14,30,37,0.05);
+  margin: 20px auto;
+}
+.image-wrapper.image-16by9 { padding-top: 56.25%; }
+.image-wrapper.image-4by3 { padding-top: 75%; }
+.image-wrapper.image-3by2 { padding-top: 66.66%; }
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.image-wrapper img[loading="lazy"] { will-change: transform; }
+.image-caption {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Small placeholder when image missing */
+.image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.95rem;
+  padding: 28px;
+}
+
 section h2 {
   color: #c0392b;
   margin-top: 0;
@@ -255,4 +359,92 @@ section h2 {
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 900px) {
+  .image-wrapper { max-width: 520px; }
+  p, .eerste, .tweede { max-width: 100%; padding: 0 12px; }
+}
+
+@media (max-width: 480px) {
+  .image-wrapper { max-width: 100%; }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.1rem; }
+  p, .eerste, .tweede { font-size: 0.98rem; }
+}
+
+/* Hero section styling */
+.hero-section {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 0;
+}
+
+.hero-section h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.hero-section p {
+  margin: 12px 0 0 0;
+  font-size: 1.2rem;
+  opacity: 0.95;
+  color: white;
+  font-weight: 500;
+}
+
+/* Content wrapper for better readability */
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.intro-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.intro-text strong {
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Call-to-action box */
+.cta-box {
+  background: linear-gradient(135deg, #28a745 0%, #1e7b34 100%);
+  color: white;
+  padding: 28px 24px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 30px auto;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(40,167,69,0.2);
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 16px;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p {
+    font-size: 1rem;
+  }
+  .content-wrapper {
+    padding: 30px 16px;
+  }
+}
+
 

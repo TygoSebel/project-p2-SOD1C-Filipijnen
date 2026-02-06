@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filipijnen - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/home-new.css">
 </head>
 <body>
 <header> 
 <nav class="navbar">
-  <div class="logo">🌏 Filipijnen</div>
+  <div class="logo">Filipijnen</div>
   <ul class="nav-links">
-    <li class="nav-item"><a href="Home.html">🏠 Home</a></li>
-    <li class="nav-item"><a href="Schoolsysteem.html">🎓 Schoolsysteem</a></li>
-    <li class="nav-item"><a href="Problemen.html">⚠️ Maatschappelijke Problemen</a></li>
-    <li class="nav-item"><a href="Oppervlakte.html">📍 Oppervlakte</a></li>
-    <li class="nav-item"><a href="aanbieden.html">🤝 Meewerken</a></li>
+    <li class="nav-item"><a href="Home.html">Home</a></li>
+    <li class="nav-item"><a href="Schoolsysteem.html">Schoolsysteem</a></li>
+    <li class="nav-item"><a href="Problemen.html">Maatschappelijke Problemen</a></li>
+    <li class="nav-item"><a href="Oppervlakte.html">Oppervlakte</a></li>
+    <li class="nav-item"><a href="aanbieden.html">Meewerken</a></li>
     <li class="nav-item dropdown">
-      <button class="dropdown-toggle">💪 Acties</button>
+      <button class="dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Acties</button>
       <div class="dropdown-menu">
-        <a href="Donatie-Tracker.html"><span class="dropdown-icon">💰</span>Donatie Tracker</a>
-        <a href="QuizGame.html"><span class="dropdown-icon">🎓</span>Quiz</a>
-        <a href="Countdown.html"><span class="dropdown-icon">⏱️</span>Event Countdown</a>
+        <a href="Donatie-Tracker.html">Donatie Tracker</a>
+        <a href="QuizGame.html">Quiz</a>
+        <a href="Countdown.html">Event Countdown</a>
       </div>
     </li>
   </ul>
@@ -29,18 +29,22 @@
 </header> 
 
 <div style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; text-align: center; padding: 50px 20px;">
-  <h1 style="margin: 0; font-size: 2.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: bold;">🌏 Filipijnen</h1>
+  <h1 style="margin: 0; font-size: 2.8rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); font-weight: bold;">Filipijnen</h1>
   <p style="margin: 10px 0 0 0; font-size: 1.1rem; opacity: 0.95;">Het hart van onze missie ligt hier</p>
 </div>
 
 <div class="container" style="margin-top: 30px;">
-  <img src="Filipijnenstrand.jpg" alt="Filipijnenstrand" class="hero-image" style="max-width: 100%; height: auto;">
+  <div class="image-wrapper image-16by9">
+    <img src="../Filipijnenstrand.jpg" alt="Strand in de Filipijnen" loading="lazy">
+  </div>
 
   <p class="eerste" style="background-color: transparent; color: #333; margin-top: 25px;">
     <strong>In de Filipijnen</strong> groeit een groot aantal kinderen op met een lege maag. Voor hen is honger geen tijdelijk ongemak, maar een dagelijkse werkelijkheid die hun gezondheid, ontwikkeling en toekomst beïnvloedt. In buurten waar armoede overheerst, moeten veel gezinnen kiezen tussen een maaltijd of andere basisbehoeften.
   </p>
 
-  <img src="armemensen.jpg" alt="armemensen" class="armemensen" style="max-width: 100%; height: auto; margin: 25px 0;">
+  <div class="image-wrapper image-3by2">
+    <img src="../armemensen.jpg" alt="Mensen in de Filipijnen" loading="lazy">
+  </div>
 
   <p class="eerste" style="background-color: transparent; color: #333;">
     Toch is er, ondanks deze moeilijke omstandigheden, een enorme veerkracht zichtbaar. <strong>Gemeenschappen doen wat ze kunnen</strong>, vrijwilligers delen voedsel uit en scholen proberen kinderen op te vangen met programma's die hen warmte en hoop bieden.
@@ -51,7 +55,7 @@
   </p>
 
   <p style="background: linear-gradient(135deg, #28a745 0%, #1e7b34 100%); text-align: center; color: white; padding: 25px 20px; border-radius: 10px; font-weight: bold; font-size: 1.1rem; margin-top: 25px;">
-    💚 Met uw donatie kunnen we levens veranderen en een toekomst vol hoop bieden. 💚
+    Met uw donatie kunnen we levens veranderen en een toekomst vol hoop bieden.
   </p>
 </div>
 

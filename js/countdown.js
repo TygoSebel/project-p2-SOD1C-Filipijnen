@@ -12,69 +12,58 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    const setIf = (id, value) => { const el = document.getElementById(id); if (el) el.textContent = value; };
+    setIf('days', String(days));
+    setIf('hours', String(hours));
+    setIf('minutes', String(minutes));
+    setIf('seconds', String(seconds));
 
     updateStatus(distance);
 }
 
 function updateStatus(distance) {
     const status = document.getElementById('statusDisplay');
+    if (!status) return;
     const now = new Date().getTime();
-    const eventEndTime = eventDate + (4 * 60 * 60 * 1000); // Event duurt 4 uur
+    const eventEndTime = eventDate + (4 * 60 * 60 * 1000);
 
     if (distance <= 0 && now < eventEndTime) {
-        status.className = 'status happening';
-        status.textContent = '🎉 Event is nu live!';
+        status.textContent = 'Event is nu live';
     } else if (distance <= 0) {
-        status.className = 'status ended';
-        status.textContent = '✓ Event is voorbij!';
+        status.textContent = 'Event is voorbij';
     } else {
-        status.className = 'status upcoming';
-        status.textContent = '⏰ Event start in...';
+        status.textContent = 'Event start binnenkort';
     }
 }
 
 function updateEventDate() {
-    const input = document.getElementById('eventInput').value;
+    const inputEl = document.getElementById('eventInput');
+    if (!inputEl) return;
+    const input = inputEl.value;
     if (input) {
         eventDate = new Date(input).getTime();
         const date = new Date(input);
-        document.getElementById('eventDateDisplay').textContent = 
-            date.toLocaleDateString('nl-NL', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+        const disp = document.getElementById('eventDateDisplay');
+        if (disp) disp.textContent = date.toLocaleString();
         updateCountdown();
     }
 }
 
 function resetToDefault() {
     eventDate = new Date(DEFAULT_EVENT).getTime();
-    document.getElementById('eventInput').value = DEFAULT_EVENT;
-    document.getElementById('eventDateDisplay').textContent = '22 Maart 2025 - 18:00';
+    const input = document.getElementById('eventInput');
+    if (input) input.value = DEFAULT_EVENT;
+    const disp = document.getElementById('eventDateDisplay');
+    if (disp) disp.textContent = '22-03-2025 18:00';
     updateCountdown();
 }
 
 function registerEvent() {
-    alert('Bedankt! Je bent ingeschreven voor het event! 🎉\n\nJe ontvangt een bevestigingsemail.');
+    alert('Bedankt! Je staat nu op de lijst.');
 }
 
-function shareEvent() {
-    const text = '🎉 Join me at the Filipijnen Event Countdown! Help us fundraise for children in need. Check it out!';
-    if (navigator.share) {
-        navigator.share({
-            title: 'Filipijnen Event',
-            text: text,
-            url: window.location.href
-        });
-    } else {
-        alert('Event:\n' + text + '\n\nURL: ' + window.location.href);
-    }
-}
-
-// Update countdown elke seconde
 window.addEventListener('load', () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
-    document.getElementById('eventInput').value = DEFAULT_EVENT;
+    const input = document.getElementById('eventInput'); if (input) input.value = DEFAULT_EVENT;
 });

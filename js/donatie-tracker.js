@@ -1,60 +1,37 @@
-// Donatie Tracker JavaScript
-
 const GOAL = 5000;
-let currentAmount = localStorage.getItem('donationAmount') ? parseInt(localStorage.getItem('donationAmount')) : 0;
+let currentAmount = 0; // eenvoudige in-memory opslag
 
 function updateProgressBar() {
     const percentage = Math.min((currentAmount / GOAL) * 100, 100);
     const progressFill = document.getElementById('progressFill');
-    progressFill.style.width = percentage + '%';
-    progressFill.textContent = Math.round(percentage) + '%';
+    if (progressFill) {
+        progressFill.style.width = percentage + '%';
+        progressFill.textContent = Math.round(percentage) + '%';
+    }
 
-    document.getElementById('currentAmount').textContent = '€' + currentAmount;
-    document.getElementById('percentageDisplay').textContent = Math.round(percentage) + '%';
-
-    updateMilestones();
-}
-
-function updateMilestones() {
-    const milestones = [
-        { id: 'milestone1', amount: 1000 },
-        { id: 'milestone2', amount: 2500 },
-        { id: 'milestone3', amount: 5000 }
-    ];
-
-    milestones.forEach(m => {
-        const element = document.getElementById(m.id);
-        if (currentAmount >= m.amount) {
-            element.classList.add('achieved');
-        }
-    });
+    const current = document.getElementById('currentAmount');
+    if (current) current.textContent = '€' + currentAmount;
 }
 
 function setDonationAmount(amount) {
-    document.getElementById('donationAmount').value = amount;
+    const input = document.getElementById('donationAmount');
+    if (input) input.value = amount;
 }
 
 function addDonation() {
-    const amount = parseInt(document.getElementById('donationAmount').value);
-    
+    const input = document.getElementById('donationAmount');
+    const amount = input ? parseInt(input.value) : NaN;
+
     if (isNaN(amount) || amount <= 0) {
         alert('Voer alstublieft een geldig bedrag in');
         return;
     }
 
     currentAmount += amount;
-    localStorage.setItem('donationAmount', currentAmount);
     updateProgressBar();
 
-    document.getElementById('donationAmount').value = '';
-    
-    const successMessage = document.getElementById('successMessage');
-    successMessage.classList.add('show');
-    
-    setTimeout(() => {
-        successMessage.classList.remove('show');
-    }, 3000);
+    if (input) input.value = '';
+    alert('Bedankt voor je donatie!');
 }
 
-// Initialiseer bij pagina load
 window.addEventListener('load', updateProgressBar);
