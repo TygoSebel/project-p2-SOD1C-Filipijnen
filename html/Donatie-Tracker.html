@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donatie Tracker - Filipijnen</title>
+    <link rel="stylesheet" href="../css/donatie-tracker.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Filipijnen</div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="Home.html">Home</a></li>
+            <li class="nav-item"><a href="Schoolsysteem.html">Schoolsysteem</a></li>
+            <li class="nav-item"><a href="Problemen.html">Maatschappelijke Problemen</a></li>
+            <li class="nav-item"><a href="Oppervlakte.html">Oppervlakte</a></li>
+            <li class="nav-item"><a href="aanbieden.html">Meewerken</a></li>
+            <li class="nav-item dropdown">
+                <button class="dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Acties</button>
+                <div class="dropdown-menu">
+                    <a href="Donatie-Tracker.html">Donatie Tracker</a>
+                    <a href="QuizGame.html">Quiz</a>
+                    <a href="Countdown.html">Event Countdown</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="tracker-container">
+    <div class="tracker-header">
+        <h1>Donatie Tracker</h1>
+        <p>Help ons ons doel te bereiken en kinderen in de Filipijnen te helpen</p>
+    </div>
+
+    <div id="successMessage" class="success-message">
+        ✓ Dank je wel voor je donatie! Je hebt een verschil gemaakt!
+    </div>
+
+    <div class="goal-info">
+        <div>Verzameld: <span id="currentAmount">€0</span></div>
+        <div>Doel: <span>€5000</span></div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill">0%</div>
+    </div>
+
+    <div class="percentage-display" id="percentageDisplay">0%</div>
+
+    <div class="donation-form">
+        <h3>Maak een donatie</h3>
+        
+        <div class="quick-donate">
+            <button class="quick-btn" onclick="setDonationAmount(10)">€10</button>
+            <button class="quick-btn" onclick="setDonationAmount(25)">€25</button>
+            <button class="quick-btn" onclick="setDonationAmount(50)">€50</button>
+        </div>
+
+        <div class="form-group">
+            <label for="donationAmount">Ander bedrag:</label>
+            <input type="number" id="donationAmount" min="1" placeholder="Voer bedrag in" value="">
+        </div>
+
+        <button class="donate-btn" onclick="addDonation()">Doneer</button>
+    </div>
+
+    <div class="milestone-list">
+        <h3>Mijlpalen</h3>
+        <div class="milestone" id="milestone1">
+            <div>
+                <strong>€1000 bereikt</strong>
+                <p class="milestone-status">20% van het doel</p>
+            </div>
+            <div class="milestone-amount">€1000</div>
+        </div>
+        <div class="milestone" id="milestone2">
+            <div>
+                <strong>€2500 bereikt</strong>
+                <p class="milestone-status">50% van het doel</p>
+            </div>
+            <div class="milestone-amount">€2500</div>
+        </div>
+        <div class="milestone" id="milestone3">
+            <div>
+                <strong>€5000 bereikt</strong>
+                <p class="milestone-status">100% - Doel bereikt!</p>
+            </div>
+            <div class="milestone-amount">€5000</div>
+        </div>
+    </div>
+</main>
+
+<footer class="footerhome">
+    <p>&copy; 2025 Filipijnen. All rights reserved.</p>
+</footer>
+
+<script src="../js/donatie-tracker.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@import url('base.css');
+/* Eenvoudige donatie-tracker stijlen */
+
+.tracker-container { max-width: 700px; margin: 30px auto; background: #fff; padding: 20px; border-radius: 6px; }
+.goal-info { display:flex; justify-content:space-between; margin-bottom:10px; }
+.progress-bar { width:100%; height:20px; background:#eee; border-radius:10px; overflow:hidden; margin-bottom:8px; }
+.progress-fill { height:100%; background:#007bff; width:0%; text-align:center; color:white; font-weight:bold; }
+.donation-form { margin-bottom:10px; }
+.quick-donate { display:flex; gap:8px; }
+.quick-btn, .donate-btn { padding:8px 10px; border:1px solid #ccc; background:white; cursor:pointer; color: #000; font-weight: 600; }
+.milestone { padding:8px; background:#f9f9f9; border-radius:4px; margin-bottom:8px; }
+.success-message { display:none; }

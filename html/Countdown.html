@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Event Countdown - Filipijnen</title>
+    <link rel="stylesheet" href="../css/countdown.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">Filipijnen</div>
+        <ul class="nav-links">
+            <li class="nav-item"><a href="Home.html">Home</a></li>
+            <li class="nav-item"><a href="Schoolsysteem.html">Schoolsysteem</a></li>
+            <li class="nav-item"><a href="Problemen.html">Maatschappelijke Problemen</a></li>
+            <li class="nav-item"><a href="Oppervlakte.html">Oppervlakte</a></li>
+            <li class="nav-item"><a href="aanbieden.html">Meewerken</a></li>
+            <li class="nav-item dropdown">
+                <button class="dropdown-toggle" onclick="this.nextElementSibling.classList.toggle('show')">Acties</button>
+                <div class="dropdown-menu">
+                    <a href="Donatie-Tracker.html">Donatie Tracker</a>
+                    <a href="QuizGame.html">Quiz</a>
+                    <a href="Countdown.html">Event Countdown</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="countdown-container">
+    <div class="countdown-header">
+        <h1>Event Countdown</h1>
+        <p>Volg de aftelling naar ons volgende grote evenement!</p>
+    </div>
+
+    <div class="event-info">
+        <div class="event-date" id="eventDateDisplay">22 Maart 2025</div>
+        <div class="event-description">
+            Jaarlijkse Filipijnse Gala - Help ons fondsen werven voor kinderen in nood
+        </div>
+    </div>
+
+    <div id="statusDisplay" class="status upcoming">⏰ Event start in...</div>
+
+    <div class="countdown-display">
+        <div class="countdown-unit">
+            <div class="countdown-number" id="days">0</div>
+            <div class="countdown-label">Dagen</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-number" id="hours">0</div>
+            <div class="countdown-label">Uren</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-number" id="minutes">0</div>
+            <div class="countdown-label">Minuten</div>
+        </div>
+        <div class="countdown-unit">
+            <div class="countdown-number" id="seconds">0</div>
+            <div class="countdown-label">Seconden</div>
+        </div>
+    </div>
+
+    <div class="event-actions">
+        <button class="btn primary" onclick="registerEvent()">📅 Inschrijven</button>
+        <button class="btn" onclick="shareEvent()">📤 Delen</button>
+    </div>
+
+    <div class="calendar-section">
+        <h3>🗓️ Event aanpassen</h3>
+        <input type="datetime-local" id="eventInput" class="calendar-input" onchange="updateEventDate()">
+        <button class="btn" onclick="resetToDefault()" style="width: 100%;">Reset naar standaard datum</button>
+    </div>
+
+    <div class="past-events">
+        <h3>📜 Vorige evenementen</h3>
+        <div class="event-item">
+            <div class="event-name">2024 Zomerfestival</div>
+            <div class="event-date-past">15 Juli 2024 - Veel success gehad!</div>
+        </div>
+        <div class="event-item">
+            <div class="event-name">Wereldwijd awareness dag</div>
+            <div class="event-date-past">10 Oktober 2024 - Over 5000 deelnemers! 👥</div>
+        </div>
+        <div class="event-item">
+            <div class="event-name">Donatie marathon</div>
+            <div class="event-date-past">1 Januari 2024 - €50.000 ingezameld!</div>
+        </div>
+    </div>
+</main>
+
+<footer class="footerhome">
+    <p>&copy; 2025 Filipijnen. All rights reserved.</p>
+</footer>
+
+<script src="../js/countdown.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@import url('base.css');
+/* Eenvoudige quiz-stijlen */
+
+.quiz-container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.question-counter { color: #007bff; font-weight: bold; }
+.question-text { font-size: 1.1rem; font-weight: bold; margin: 10px 0; }
+.answer-options { display: flex; flex-direction: column; gap: 8px; }
+.answer-btn { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; cursor: pointer; text-align: left; color: #000; font-weight: 600; }
+.answer-btn.selected { background: #007bff; color: white; }
+.feedback { margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
+.feedback.show { display: block; }
+.results-container { text-align: center; }
+.score-circle { width: 120px; height: 120px; border-radius: 50%; background: #007bff; color: white; display:flex; align-items:center; justify-content:center; margin: 10px auto; }
+.btn { padding: 8px 10px; border: 1px solid #ccc; background: white; cursor: pointer; color: #000; font-weight: 600; }
+.hidden { display: none; }
